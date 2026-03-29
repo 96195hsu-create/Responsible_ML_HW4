@@ -22,9 +22,10 @@ The goal is to understand how the model makes decisions and evaluate potential f
 The dataset is loaded within the notebook, so no additional setup is required.
 
 ## Methods Used
-- LIME (Local explanation)
-- SHAP (Global and local feature importance)
-- Counterfactual analysis (DiCE)
+This project uses three main explanation approaches:
+- SHAP (global and local feature importance)
+- LIME (local explanations)
+- DiCE (counterfactual analysis)
 
 ## Workflows
 ### 1. SHAP Analysis
@@ -40,8 +41,8 @@ The dataset is loaded within the notebook, so no additional setup is required.
 - Applied LIME to the same individuals  
 - Compared feature attributions:
   - Identified where LIME and SHAP agree  
-  - Identified where they differ  
-- Discussed implications of disagreement for model governance  
+  - Identified where they differ
+-  Briefly discussed what these differences might mean for model use
 
 ### 3. Counterfactual Analysis (DiCE)
 - Generated counterfactuals for each individual  
@@ -57,11 +58,12 @@ The dataset is loaded within the notebook, so no additional setup is required.
 
 ## Key Insights
 - A small number of features (e.g., `priors_count`, `age`) drive most predictions  
-- Explanation methods are largely consistent but differ in local detail  
+- Explanation methods are largely consistent, but can differ when explaining individual cases    
 - Some counterfactuals are not actionable in practice  
 - Group-level disparities suggest potential fairness risks  
 
 ## Notes
 This project extends the previous assignment by moving from data preparation to model explanation and evaluation.  
-The focus is on interpretability, fairness, and understanding model behavior in a decision-making context.
+The focus is on interpretability, fairness, and understanding model behavior in a decision-making context.  
+
 This project is part of the Responsible Machine Learning course at GWU.
